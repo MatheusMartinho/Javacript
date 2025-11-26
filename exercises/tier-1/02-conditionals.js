@@ -11,18 +11,32 @@
 
 function classificarNota(nota) {
   // TODO: retorne "A" para >= 9, "B" para >= 7, caso contrário "C".
-  return "";
+  if(nota>=9) return "A";
+  if(nota>=7) return "B";
+  return "C";
 }
 
 function fizzBuzz(limite = 20) {
   for (let numero = 1; numero <= limite; numero++) {
     // TODO: console.log("Fizz" para múltiplos de 3, "Buzz" para 5, "FizzBuzz" para ambos, caso contrário o número).
+    if(numero % 15 === 0){
+      console.log(numero, "FizzBuzz");
+    } else if(numero % 3 === 0){
+      console.log(numero, "Fizz");
+    } else if(numero % 5 === 0){
+      console.log(numero, "Buzz");
+    } else {
+      console.log(numero);
+    }
   }
 }
-
+fizzBuzz(); 
 function statusMaiorIdade(idade) {
   // TODO: retorne "Adulto" ou "Menor" usando apenas operador ternário.
-  return "";
+  return idade >= 18 ? "Adulto" : "Menor";
 }
+console.log(statusMaiorIdade(19));
+console.log(statusMaiorIdade(15));
+console.log(statusMaiorIdade(19));
 
 module.exports = { classificarNota, fizzBuzz, statusMaiorIdade };
