@@ -10,22 +10,34 @@
  */
 
 function gerarTabuada(numero, limite) {
-  const resultados = [];
-  // TODO: preencha resultados usando for clássico.
+  let resultados = [];
+  for(let i=0; i<=limite; i++){
+    resultados.push(numero * i);
+  }
   return resultados;
 }
 
 function listarFilmes(filmes) {
-  let resultado = "";
-  // TODO: use for...of para montar "1. Filme" com quebra de linha entre itens.
-  return resultado.trim();
+ let resultados = "";
+ let indice = 1;
+ for(const filme of filmes){
+  resultados = resultados + `${indice}. ${filme}\n`;
+  indice++;
+ }
+ return resultados.trim();
 }
 
 function contarAte(limite) {
-  const valores = [];
+  const lista = [];
   let atual = 0;
-  // TODO: use while para adicionar números até atingir limite.
-  return valores;
+  while(atual <= limite){
+    lista.push(atual);
+    atual++
+  }
+  return lista;
 }
 
+console.log(gerarTabuada(2, 10));
+console.log(listarFilmes(["Filme 1", "Filme 2", "Filme 3"]));
+console.log(contarAte(10));
 module.exports = { gerarTabuada, listarFilmes, contarAte };
