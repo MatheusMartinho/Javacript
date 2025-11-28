@@ -12,43 +12,62 @@
 
 function somar(a, b) {
   // TODO
+  return a + b;
 }
 
 function subtrair(a, b) {
   // TODO
+  return a - b;
 }
 
 function multiplicar(a, b) {
   // TODO
+  return a * b;
 }
 
 function dividir(a, b) {
   // TODO: trate divisão por zero retornando null.
+  return a / b;
 }
 
 const somarArrow = (a, b) => {
   // TODO
+  return a + b;
 };
 
 const subtrairArrow = (a, b) => {
   // TODO
+  return a - b;
 };
 
 const multiplicarArrow = (a, b) => {
   // TODO
+  return a * b;
 };
 
 const dividirArrow = (a, b) => {
   // TODO
+  return a / b;
 };
 
 const cumprimentar = (nome = "Anônimo") => {
   // TODO: console.log com template string.
+  return (`Olá ${nome}, seja bem vindo!`);
 };
 
 function calcular(operacao, a, b) {
   // TODO: valide que operacao é função e execute.
+  if(typeof operacao !== "function") {
+    throw new Error("operacao precisa se uma funcao");
+  }
+  return operacao(a,b);
 }
+console.log(somar(2,5));
+console.log(subtrair(5,2));
+console.log(multiplicar(5,2));
+console.log(dividir(6,2));
+console.log(cumprimentar('Matheus'));
+console.log(calcular(somar,5,5));
 
 module.exports = {
   somar,
